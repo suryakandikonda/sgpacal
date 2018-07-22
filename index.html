@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="animate.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+    <title>SGPA Calculator</title>
+  </head>
+  <body>
+
+    <div id="CounterVisitor">
+</div>
+
+<script>
+var n = localStorage.getItem('on_load_counter');
+
+if (n === null) {
+  n = 0;
+}
+n++;
+
+localStorage.setItem("on_load_counter", n);
+
+nums = n.toString().split('').map(Number);
+document.getElementById('CounterVisitor').innerHTML = '';
+for (var i of nums) {
+  document.getElementById('CounterVisitor').innerHTML += '<span class="counter-item">' + i + '</span>';
+}
+
+</script>
+    <div class="container" style="margin-top: 10px;">
+      <h1 style="text-align: center; border-color: blue; border-style: solid; padding-bottom: 10px;">Calcutate your 1-2 SGPA Here!!</h1>
+      <pre style="text-align: center;" class="animated rubberBand">
+        Designed and Developed by Surya Kandikonda 
+        Get the souce code from <a href="#">here</a>
+      </pre>
+      <div class="jumbotron">
+      <form>
+
+
+
+
+  <div class="form-row">
+    <div class="col-5">
+      <h4>English -II</h4>
+    </div>
+    <div class="col">
+      <select id="inputState1" class="form-control" required>
+        <option selected>Select Grade Letter</option>
+        <option>O</option>
+        <option>S</option>
+        <option>A</option>
+        <option>B</option>
+        <option>C</option>
+        <option>D</option>
+        <option>F</option>
+      </select>
+    </div>
+    <div class="col">
+      <input class="form-control" placeholder="Credits"  id="1" required>
+    </div>
+  </div>
+  <br></br>
+  <div class="form-row">
+    <div class="col-5">
+      <h4>Mathematics-III</h4>
+    </div>
+    <div class="col">
+      <select id="inputState2" class="form-control" required>
+        <option selected>Select Grade Letter</option>
+        <option>O</option>
+        <option>S</option>
+        <option>A</option>
+        <option>B</option>
+        <option>C</option>
+        <option>D</option>
+        <option>F</option>
+      </select>
+    </div>
+    <div class="col">
+      <input class="form-control" placeholder="Credits" id="2"required>
+    </div>
+  </div>
+  <br></br>
+  <div class="form-row">
+    <div class="col-5">
+      <h4>Applied Chemistry</h4>
+    </div>
+    <div class="col">
+      <select id="inputState3" class="form-control" required>
+        <option selected>Select Grade Letter</option>
+        <option>O</option>
+        <option>S</option>
+        <option>A</option>
+        <option>B</option>
+        <option>C</option>
+        <option>D</option>
+        <option>F</option>
+      </select>
+    </div>
+    <div class="col">
+      <input class="form-control" placeholder="Credits" id="3" required>
+    </div>
+  </div>
+  <br></br>
+  <div class="form-row">
+    <div class="col-5">
+      <h4>Object Oriented Programming through C++</h4>
+    </div>
+    <div class="col">
+      <select id="inputState4" class="form-control" required>
+        <option selected>Select Grade Letter</option>
+        <option>O</option>
+        <option>S</option>
+        <option>A</option>
+        <option>B</option>
+        <option>C</option>
+        <option>D</option>
+        <option>F</option>
+      </select>
+    </div>
+    <div class="col">
+      <input class="form-control" placeholder="Credits" id="4" required>
+    </div>
+  </div>
+  <br></br>
+  <div class="form-row">
+    <div class="col-5">
+      <h4>Environmental Studies</h4>
+    </div>
+    <div class="col">
+      <select id="inputState5" class="form-control" required>
+        <option selected>Select Grade Letter</option>
+        <option>O</option>
+        <option>S</option>
+        <option>A</option>
+        <option>B</option>
+        <option>C</option>
+        <option>D</option>
+        <option>F</option>
+      </select>
+    </div>
+    <div class="col">
+      <input class="form-control" placeholder="Credits" id="5" required>
+    </div>
+  </div>
+  <br></br>
+  <div class="form-row">
+    <div class="col-5">
+      <h4>Engineering Mechanics</h4>
+    </div>
+    <div class="col">
+      <select id="inputState6" class="form-control" required>
+        <option selected>Select Grade Letter</option>
+        <option>O</option>
+        <option>S</option>
+        <option>A</option>
+        <option>B</option>
+        <option>C</option>
+        <option>D</option>
+        <option>F</option>
+      </select>
+    </div>
+    <div class="col">
+      <input class="form-control" placeholder="Credits" id="6" required>
+    </div>
+  </div>
+  <br></br>
+  <div class="form-row">
+    <div class="col-5">
+      <h4>Applied / Engineering Chemistry Laboratory</h4>
+    </div>
+    <div class="col">
+      <select id="inputState7" class="form-control" required>
+        <option selected>Select Grade Letter</option>
+        <option>O</option>
+        <option>S</option>
+        <option>A</option>
+        <option>B</option>
+        <option>C</option>
+        <option>D</option>
+        <option>F</option>
+      </select>
+    </div>
+    <div class="col">
+      <input class="form-control" placeholder="Credits" id="7" required>
+    </div>
+  </div>
+  <br></br>
+  <div class="form-row">
+    <div class="col-5">
+      <h4>English - Communication Skills Lab – 2</h4>
+    </div>
+    <div class="col">
+      <select id="inputState8" class="form-control" required>
+        <option selected>Select Grade Letter</option>
+        <option>O</option>
+        <option>S</option>
+        <option>A</option>
+        <option>B</option>
+        <option>C</option>
+        <option>D</option>
+        <option>F</option>
+      </select>
+    </div>
+    <div class="col">
+      <input class="form-control" placeholder="Credits" id="8"required>
+    </div>
+  </div>
+  <br></br>
+  <div class="form-row">
+    <div class="col-5">
+      <h4>Object Oriented Programming Lab</h4>
+    </div>
+    <div class="col">
+      <select id="inputState9" class="form-control" required>
+        <option selected>Select Grade Letter</option>
+        <option>O</option>
+        <option>S</option>
+        <option>A</option>
+        <option>B</option>
+        <option>C</option>
+        <option>D</option>
+        <option>F</option>
+      </select>
+    </div>
+    <div class="col">
+      <input class="form-control" placeholder="Credits" id="9" required>
+    </div>
+  </div>
+</form>
+<br><br>
+<div style="text-align: center;">
+<input class="btn btn-primary" type="submit" value="Submit" onclick="ans()">
+</div>
+<div class="alert alert-primary" role="alert" style="text-align: center; margin-top: 20px;">
+  <h1 id="sol"></h1>
+</div>
+
+</div>
+
+    </div>
+
+    <script type="text/javascript">
+      function ans() {
+        var a,s,d,f,g,h,j,k,l;
+        a = Number(document.getElementById('1').value);
+        s = Number(document.getElementById('2').value);
+        d = Number(document.getElementById('3').value);
+        f = Number(document.getElementById('4').value);
+        g = Number(document.getElementById('5').value);
+        h = Number(document.getElementById('6').value);
+        j = Number(document.getElementById('7').value);
+        k = Number(document.getElementById('8').value);
+        l = Number(document.getElementById('9').value);
+
+        //Grade Point Calculation 
+        var qgp,wgp,egp,rgp,tgp,ygp,ugp,igp,ogp;
+        var op1 = document.getElementById("inputState1").value;
+        if(op1=="O"){
+          qgp = 10;
+        }
+        if(op1=="S"){
+          qgp = 9;
+        }
+        if(op1=="A"){
+          qgp = 8;
+        }
+        if(op1=="B"){
+          qgp = 7;
+        }
+        if(op1=="C"){
+          qgp = 6;
+        }
+        if(op1=="D"){
+          qgp=5;
+        }
+        if(op1=="F"){
+          qgp=0;
+        }
+
+        var op2 = document.getElementById("inputState2").value;
+        if(op2=="O"){
+          wgp = 10;
+        }
+        if(op2=="S"){
+          wgp = 9;
+        }
+        if(op2=="A"){
+          wgp = 8;
+        }
+        if(op2=="B"){
+          wgp = 7;
+        }
+        if(op2=="C"){
+          wgp = 6;
+        }
+        if(op2=="D"){
+          wgp=5;
+        }
+        if(op2=="F"){
+          wgp=0;
+        }
+
+        var op3 = document.getElementById("inputState3").value;
+        if(op3=="O"){
+          egp = 10;
+        }
+        if(op3=="S"){
+          egp = 9;
+        }
+        if(op3=="A"){
+          egp = 8;
+        }
+        if(op3=="B"){
+          egp = 7;
+        }
+        if(op3=="C"){
+          egp = 6;
+        }
+        if(op3=="D"){
+          egp=5;
+        }
+        if(op3=="F"){
+          egp=0;
+        }
+
+        var op4 = document.getElementById("inputState4").value;
+        if(op4=="O"){
+          rgp = 10;
+        }
+        if(op4=="S"){
+          rgp = 9;
+        }
+        if(op4=="A"){
+          rgp = 8;
+        }
+        if(op4=="B"){
+          rgp = 7;
+        }
+        if(op4=="C"){
+          rgp = 6;
+        }
+        if(op4=="D"){
+          rgp=5;
+        }
+        if(op4=="F"){
+          rgp=0;
+        }
+
+        var op5 = document.getElementById("inputState5").value;
+        if(op5=="O"){
+          tgp = 10;
+        }
+        if(op5=="S"){
+          tgp = 9;
+        }
+        if(op5=="A"){
+          tgp = 8;
+        }
+        if(op5=="B"){
+          tgp = 7;
+        }
+        if(op5=="C"){
+          tgp = 6;
+        }
+        if(op5=="D"){
+          tgp=5;
+        }
+        if(op5=="F"){
+          tgp=0;
+        }
+
+        var op6 = document.getElementById("inputState6").value;
+        if(op6=="O"){
+          ygp = 10;
+        }
+        if(op6=="S"){
+          ygp = 9;
+        }
+        if(op6=="A"){
+          ygp = 8;
+        }
+        if(op6=="B"){
+          ygp = 7;
+        }
+        if(op6=="C"){
+          ygp = 6;
+        }
+        if(op6=="D"){
+          ygp=5;
+        }
+        if(op6=="F"){
+          ygp=0;
+        }
+
+        var op7 = document.getElementById("inputState7").value;
+        if(op7=="O"){
+          ugp = 10;
+        }
+        if(op7=="S"){
+          ugp = 9;
+        }
+        if(op7=="A"){
+          ugp = 8;
+        }
+        if(op7=="B"){
+          ugp = 7;
+        }
+        if(op7=="C"){
+          ugp = 6;
+        }
+        if(op7=="D"){
+          ugp=5;
+        }
+        if(op7=="F"){
+          ugp=0;
+        }
+
+        var op8 = document.getElementById("inputState8").value;
+        if(op8=="O"){
+          igp = 10;
+        }
+        if(op8=="S"){
+          igp = 9;
+        }
+        if(op8=="A"){
+          igp = 8;
+        }
+        if(op8=="B"){
+          igp = 7;
+        }
+        if(op8=="C"){
+          igp = 6;
+        }
+        if(op8=="D"){
+          igp=5;
+        }
+        if(op8=="F"){
+          igp=0;
+        }
+
+        var op9 = document.getElementById("inputState9").value;
+        if(op9=="O"){
+          ogp = 10;
+        }
+        if(op9=="S"){
+          ogp = 9;
+        }
+        if(op9=="A"){
+          ogp = 8;
+        }
+        if(op9=="B"){
+          ogp = 7;
+        }
+        if(op9=="C"){
+          ogp = 6;
+        }
+        if(op9=="D"){
+          ogp=5;
+        }
+        if(op9=="F"){
+          ogp=0;
+        }
+
+
+        var creditSum = a+s+d+f+g+h+j+k+l;
+        var CreditPointSum = ((qgp*a) + (wgp*s) + (egp*d) + (rgp*f) + (tgp*g) + (ygp*h) + (ugp*j) + (igp*k) + (ogp*l));
+        var sgpa = CreditPointSum/creditSum;
+
+        document.getElementById("sol").innerHTML = "Your SGPA is :" + sgpa;
+
+
+
+    }
+    </script>
+
+    <div>
+      <h5>Note :</h5>
+      <ul>
+        <li>This website is done just as the Mini Project</li>
+        <li>We are not responsible, if any incorrect SGPA is shown</li>
+        <li>We recommend you to check the SGPA on your own by using the Formula, if it is Important</li>
+      </ul>
+    </div>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  </body>
+</html>
