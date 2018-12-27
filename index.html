@@ -13,32 +13,12 @@
   </head>
   <body>
 
-    <div id="CounterVisitor">
-</div>
-
-<script>
-var n = localStorage.getItem('on_load_counter');
-
-if (n === null) {
-  n = 0;
-}
-n++;
-
-localStorage.setItem("on_load_counter", n);
-
-nums = n.toString().split('').map(Number);
-document.getElementById('CounterVisitor').innerHTML = '';
-for (var i of nums) {
-  document.getElementById('CounterVisitor').innerHTML += '<span class="counter-item">' + i + '</span>';
-}
-
-</script>
     <div class="container" style="margin-top: 10px;">
-      <h1 style="text-align: center; border-color: blue; border-style: solid; padding-bottom: 10px;">Calcutate your 1-2 SGPA Here!!</h1>
-      <pre style="text-align: center;" class="animated rubberBand">
-        Designed and Developed by Surya Kandikonda 
-        Get the souce code from <a href="https://github.com/suryakandikonda/sgpacal.git">here</a>
-      </pre>
+      <h1 style="text-align: center; border-color: blue; border-style: solid; padding-bottom: 10px;">Calcutate your 2-1 SGPA Here!!</h1>
+      <p style="text-align: center; margin: 5px;" class="animated rubberBand">
+        Designed and Developed by <br><i><strong style="color:#4747b1;">Surya Kandikonda</strong></i><br>
+        Get the souce code from <a href="https://github.com/suryakandikonda/sgpacal.git" target="_blank">here</a>
+      </p>
       <div class="jumbotron">
       <form>
 
@@ -47,7 +27,7 @@ for (var i of nums) {
 
   <div class="form-row">
     <div class="col-5">
-      <h4>English -II</h4>
+      <h4>Statistics with R Programming</h4>
     </div>
     <div class="col">
       <select id="inputState1" class="form-control" required>
@@ -62,13 +42,13 @@ for (var i of nums) {
       </select>
     </div>
     <div class="col">
-      <input class="form-control" placeholder="Credits"  id="1" required>
+      <input class="form-control" placeholder="Credits"  id="1" required value="3">
     </div>
   </div>
   <br></br>
   <div class="form-row">
     <div class="col-5">
-      <h4>Mathematics-III</h4>
+      <h4>MFCS</h4>
     </div>
     <div class="col">
       <select id="inputState2" class="form-control" required>
@@ -83,13 +63,13 @@ for (var i of nums) {
       </select>
     </div>
     <div class="col">
-      <input class="form-control" placeholder="Credits" id="2"required>
+      <input class="form-control" placeholder="Credits" id="2"required value="3">
     </div>
   </div>
   <br></br>
   <div class="form-row">
     <div class="col-5">
-      <h4>Applied Chemistry</h4>
+      <h4>Digital Logic Design(DLD)</h4>
     </div>
     <div class="col">
       <select id="inputState3" class="form-control" required>
@@ -104,13 +84,13 @@ for (var i of nums) {
       </select>
     </div>
     <div class="col">
-      <input class="form-control" placeholder="Credits" id="3" required>
+      <input class="form-control" placeholder="Credits" id="3" required value="3">
     </div>
   </div>
   <br></br>
   <div class="form-row">
     <div class="col-5">
-      <h4>Object Oriented Programming through C++</h4>
+      <h4>Python Programming</h4>
     </div>
     <div class="col">
       <select id="inputState4" class="form-control" required>
@@ -125,13 +105,13 @@ for (var i of nums) {
       </select>
     </div>
     <div class="col">
-      <input class="form-control" placeholder="Credits" id="4" required>
+      <input class="form-control" placeholder="Credits" id="4" required value="3">
     </div>
   </div>
   <br></br>
   <div class="form-row">
     <div class="col-5">
-      <h4>Environmental Studies</h4>
+      <h4>DS</h4>
     </div>
     <div class="col">
       <select id="inputState5" class="form-control" required>
@@ -146,13 +126,13 @@ for (var i of nums) {
       </select>
     </div>
     <div class="col">
-      <input class="form-control" placeholder="Credits" id="5" required>
+      <input class="form-control" placeholder="Credits" id="5" required value="3"> 
     </div>
   </div>
   <br></br>
   <div class="form-row">
     <div class="col-5">
-      <h4>Engineering Mechanics</h4>
+      <h4>CG</h4>
     </div>
     <div class="col">
       <select id="inputState6" class="form-control" required>
@@ -167,13 +147,13 @@ for (var i of nums) {
       </select>
     </div>
     <div class="col">
-      <input class="form-control" placeholder="Credits" id="6" required>
+      <input class="form-control" placeholder="Credits" id="6" required value="3">
     </div>
   </div>
   <br></br>
   <div class="form-row">
     <div class="col-5">
-      <h4>Applied / Engineering Chemistry Laboratory</h4>
+      <h4>DS through C++ Lab</h4>
     </div>
     <div class="col">
       <select id="inputState7" class="form-control" required>
@@ -188,13 +168,13 @@ for (var i of nums) {
       </select>
     </div>
     <div class="col">
-      <input class="form-control" placeholder="Credits" id="7" required>
+      <input class="form-control" placeholder="Credits" id="7" required value="2">
     </div>
   </div>
   <br></br>
   <div class="form-row">
     <div class="col-5">
-      <h4>English - Communication Skills Lab – 2</h4>
+      <h4>Python Programming Lab</h4>
     </div>
     <div class="col">
       <select id="inputState8" class="form-control" required>
@@ -209,30 +189,10 @@ for (var i of nums) {
       </select>
     </div>
     <div class="col">
-      <input class="form-control" placeholder="Credits" id="8"required>
+      <input class="form-control" placeholder="Credits" id="8"required value="2">
     </div>
   </div>
   <br></br>
-  <div class="form-row">
-    <div class="col-5">
-      <h4>Object Oriented Programming Lab</h4>
-    </div>
-    <div class="col">
-      <select id="inputState9" class="form-control" required>
-        <option selected>Select Grade Letter</option>
-        <option>O</option>
-        <option>S</option>
-        <option>A</option>
-        <option>B</option>
-        <option>C</option>
-        <option>D</option>
-        <option>F</option>
-      </select>
-    </div>
-    <div class="col">
-      <input class="form-control" placeholder="Credits" id="9" required>
-    </div>
-  </div>
 </form>
 <br><br>
 <div style="text-align: center;">
@@ -248,7 +208,7 @@ for (var i of nums) {
 
     <script type="text/javascript">
       function ans() {
-        var a,s,d,f,g,h,j,k,l;
+        var a,s,d,f,g,h,j,k;
         a = Number(document.getElementById('1').value);
         s = Number(document.getElementById('2').value);
         d = Number(document.getElementById('3').value);
@@ -257,10 +217,9 @@ for (var i of nums) {
         h = Number(document.getElementById('6').value);
         j = Number(document.getElementById('7').value);
         k = Number(document.getElementById('8').value);
-        l = Number(document.getElementById('9').value);
 
         //Grade Point Calculation 
-        var qgp,wgp,egp,rgp,tgp,ygp,ugp,igp,ogp;
+        var qgp,wgp,egp,rgp,tgp,ygp,ugp,igp;
         var op1 = document.getElementById("inputState1").value;
         if(op1=="O"){
           qgp = 10;
@@ -445,32 +404,10 @@ for (var i of nums) {
           igp=0;
         }
 
-        var op9 = document.getElementById("inputState9").value;
-        if(op9=="O"){
-          ogp = 10;
-        }
-        if(op9=="S"){
-          ogp = 9;
-        }
-        if(op9=="A"){
-          ogp = 8;
-        }
-        if(op9=="B"){
-          ogp = 7;
-        }
-        if(op9=="C"){
-          ogp = 6;
-        }
-        if(op9=="D"){
-          ogp=5;
-        }
-        if(op9=="F"){
-          ogp=0;
-        }
+  
 
-
-        var creditSum = a+s+d+f+g+h+j+k+l;
-        var CreditPointSum = ((qgp*a) + (wgp*s) + (egp*d) + (rgp*f) + (tgp*g) + (ygp*h) + (ugp*j) + (igp*k) + (ogp*l));
+        var creditSum = a+s+d+f+g+h+j+k;
+        var CreditPointSum = ((qgp*a) + (wgp*s) + (egp*d) + (rgp*f) + (tgp*g) + (ygp*h) + (ugp*j) + (igp*k));
         var sgpa = CreditPointSum/creditSum;
 
         document.getElementById("sol").innerHTML = "Your SGPA is :" + sgpa;
@@ -479,6 +416,7 @@ for (var i of nums) {
 
     }
     </script>
+
 
     <div>
       <h5>Note :</h5>
